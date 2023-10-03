@@ -4,4 +4,11 @@ This is a module that defines empty functions for use with the  `Invoke-AtomicRu
 
 Copy the files from this repository into a folder called **AtomicRunnerHooks** in your `$env:PSModulePath`
 
-Put code that you want to run before and after atomic execution and/or before and after atomic cleanup command execution.
+Put code that you want to run before and after atomic execution and/or before and after atomic cleanup command execution (see *AtomicRunnerHooks.ps1*).
+
+```powershell
+function Invoke-AtomicRunnerPreAtomicHook { }
+function Invoke-AtomicRunnerPostAtomicHook { }
+function Invoke-AtomicRunnerPreAtomicCleanupHook { }
+function Invoke-AtomicRunnerPostAtomicCleanupHook { }
+```
